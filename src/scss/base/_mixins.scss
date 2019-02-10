@@ -1,0 +1,143 @@
+@mixin on-top {
+    position: relative;
+    z-index: 99;
+}
+
+@mixin vertical-Align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin backgroundPattern {
+    background: $mian;
+    background-image: $background-pattern;
+}
+
+@mixin social-media-div {
+    display: flex;
+    justify-content: space-between;
+    width: 10em;
+}
+
+@mixin overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: $mian-color;
+}
+
+$skill__cover__opt1: rgba(57, 212, 229, .3);
+$skill__cover__opt2: rgba(226, 246, 213, .4);
+$skill__cover__opt3: rgba(57, 212, 229, .3);
+$skill__cover__opt1: rgba(57, 212, 229, .3);
+
+@mixin project-cover($color) {
+    &:after {
+        position: absolute;
+        z-index: 0;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: $color;
+    }
+}
+
+@mixin page-name {
+color: #fff;
+        position: absolute;
+        top: 8%;
+        left: 0;
+        transform: rotate(-90deg);
+        padding-bottom: .5em;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: .3em;
+            content: '';
+            height: 1em;
+            width: 100%;
+            border-bottom: 1px solid $highlight;
+        }
+}
+
+@mixin buttons  {
+    background: $highlight;
+                padding: .6em;
+                width: 7em;
+                border-radius: .9em;
+                color: #fff;
+                transition: all .2s ease-in;
+                cursor: pointer;
+
+                &:hover {
+                    background: #fff;
+                    border: 1px solid $highlight;
+                    color: $highlight;
+                }
+}
+
+// Media Queries
+
+$mobile:  320px;
+$tablet: 480px;
+$desctop: 850px;
+$large-desctop: 1024px;
+
+@mixin  mobile {
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: $large-desctop) {
+        @content;
+    }
+}
+
+@mixin  desktop {
+    @media (min-width: $tablet) and (max-width: $large-desctop) {
+        @content;
+    }
+}
+
+@mixin lgDesctop {
+    @media (min-width: $large-desctop) {
+        @content;
+    }
+    
+}
+
+@keyframes wiggle {
+    0%  { transform: rotate(0deg); }
+    5%  { transform: rotate(5deg); }
+    10% { transform: rotate(-5deg); }
+    15% { transform: rotate(5deg); }
+    20% { transform: rotate(-5deg); }
+    25% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    35% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg);}
+    45% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    55% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    65% { transform: rotate(5deg); }
+    70% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    85% { transform: rotate(5deg); }
+    90% { transform: rotate(-5deg);}
+    95% { transform: rotate(5deg);}
+    100% { transform: rotate(0deg);}
+}
+
+@keyframes hintDown {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(.2em);}
+    100% { transform: translateY(0);}
+}

@@ -1,0 +1,95 @@
+@import '../base/base';
+
+#projects {
+    position: relative;
+    background: #272F44;
+    background-image: $background-pattern;
+
+    .projects-menu>ul {
+        @include vertical-Align;
+        justify-content: space-around;
+        height: 12em;
+        width: 50%;
+
+        li {
+            list-style: none;
+        }
+    }
+
+
+    &>h2 {
+        @include page-name;
+        left: -1%;
+    }
+}
+
+.projects-parent {
+    @include vertical-Align;
+    justify-content: center;
+
+    .projects-container {
+        // margin-top: 12em;
+        height: 60%;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .project-card {
+            position: relative;
+            margin: 2%;
+            width: 20%;
+            height: 30em;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            
+            .github {
+                position: absolute;
+                z-index: 5;
+                color: #fff;
+                top: 50%;
+                right: 50%;
+            }
+
+            &:hover .project-div {
+                bottom: 30%;
+            }
+
+            
+            .project-div {
+                position: absolute;
+                bottom: -100%;
+                transition: bottom .3s ease-in;
+                width: 100%;
+                text-align: center;
+                transform: translateZ(50px);
+
+                a,
+                h3 {
+                    color: #fff;
+                    padding-top: 1em;
+                    margin: auto;
+                }
+
+                
+
+
+            }
+
+            &:nth-child(1) {
+                // @include project-cover($skill__cover__opt1);
+                // background: center/cover no-repeat url('../../img/project/marwan-page.png');
+                // background-size: auto 35em;
+
+            }
+
+            @include mobile {
+                width: 90%;
+            }
+
+        }
+    }
+}

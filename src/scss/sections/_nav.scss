@@ -1,0 +1,37 @@
+@import '../base/base';
+
+
+.navigation {
+    height: 10vh;
+    width: 100%;
+    align-self: flex-end;
+    margin: 0 auto;
+    background-color: $thirinery;
+    @include on-top;
+
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+
+
+
+        li {
+            list-style: none;
+
+            a {
+                font-size: 1.3em;
+                text-transform: uppercase;
+                letter-spacing: .04em;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+    }
+}

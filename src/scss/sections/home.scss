@@ -1,0 +1,94 @@
+@import '../base/base';
+
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: center/cover no-repeat url('/img/home-background.jpg') #eee;
+    overflow: hidden;
+
+    .logo {
+        position: relative;
+        z-index: 1;
+        height: 3em;
+        width: 6em;
+        // background: center / contain no-repeat url('/img/igdeveloperslogo.png');
+        margin-top: 2em;
+        margin-left: 2em;
+
+        &>img {
+            width: 7em;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: -23%;
+        height: 168%;
+        width: 111%;
+        background: rgba(20, 21, 46, 0.92);
+        z-index: 0;
+        transform: skewY(-132deg);
+        @include mobile {
+            transform: skewY(0);
+            height: 100%;
+            width: 100%;
+            left: 0;
+        }
+
+        @include tablet {
+            left: -9%;
+        }
+    }
+
+    .intro {
+        margin-right: auto;
+        height: 90vh;
+        @include on-top;
+        margin-top: 9em;
+        color: #eee;
+        align-self: center;
+        margin-left: 2em;
+        
+        @include mobile {
+            margin-top: 6em;
+        }
+        
+        @include lgDesctop {
+            margin-top: 20em;
+        }
+
+        h1 {
+            font-size: 2.4em;
+        }
+
+        .arrow-down {
+            width: 3em;
+            height: 3em;
+            background: $highlight;
+            margin-top: 4em;
+            border-radius: 3px;
+            @include vertical-Align;
+            justify-content: center;
+
+            @include mobile {
+                display: none;
+            }
+
+            .fa-arrow-down {
+                animation: hintDown .5s infinite ease-in-out;
+            }
+        }
+
+
+        .social-media {
+            @include social-media-div;
+        }
+
+
+    }
+
+}
