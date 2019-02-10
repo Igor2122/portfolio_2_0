@@ -25,8 +25,8 @@ class Card {
         `;
         
         this.element.addEventListener("mousemove", (e) => {
-            this.element.style.backgroundPositionY = -e.offsetY / 30 + "px";
-            this.element.style.backgroundPositionX = -e.offsetX / 30 + "px";
+            // this.element.style.backgroundPositionY = -e.offsetY / 30 + "px";
+            // this.element.style.backgroundPositionX = -e.offsetX / 30 + "px";
 
         });
 
