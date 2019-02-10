@@ -48,7 +48,7 @@
         margin-right: auto;
         height: 90vh;
         @include on-top;
-        margin-top: 9em;
+        // margin-top: 9em;
         color: #eee;
         align-self: center;
         margin-left: 2em;
@@ -58,7 +58,7 @@
         }
         
         @include lgDesctop {
-            margin-top: 20em;
+            margin-top: 10em;
         }
 
         h1 {

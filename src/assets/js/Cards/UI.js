@@ -29,15 +29,30 @@ class UI {
         document.addEventListener('DOMContentLoaded', scrollEvents);
     }
 
-    renderCardsMenu() {
-        this.menu = document.createElement('div');
 
+    // <ul>
+    //     <li>Commercial</li>
+    //     <li>Fun</li>
+    //   </ul>
+    renderCardsMenu() {
+        const projMenuSection = document.querySelector('.projects-menu');
+        this.menu = document.createElement('ul');
+        const menuItems = ['Commerercial', 'Fun'];
+        for(let menuItem of menuItems){
+            console.log(menuItem);
+            this.li = document.createElement('li');
+            this.li.textContent = menuItem;
+
+            this.menu.appendChild(this.li);
+        }
+
+        projMenuSection.appendChild(this.menu);
     }
 
     renderCardtoScreen() {
         const cardsParent = document.querySelector('.projects-container');
         for (let card of cardsData) {
-            if(card.category === 'commercial'){
+            if(card.category === 'fun'){
                 let cardComp = new Card(card.id, card.name, card.img, card.git);
                 cardComp.mount(cardsParent);
             }
@@ -47,6 +62,7 @@ class UI {
     update() {
         this.stickyMenu();
         this.renderCardtoScreen();
+        this.renderCardsMenu();
     }
 
 }
