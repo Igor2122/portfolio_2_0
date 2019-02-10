@@ -79,12 +79,6 @@
 
             }
 
-            &:nth-child(1) {
-                // @include project-cover($skill__cover__opt1);
-                // background: center/cover no-repeat url('../../img/project/marwan-page.png');
-                // background-size: auto 35em;
-
-            }
 
             @include mobile {
                 width: 90%;

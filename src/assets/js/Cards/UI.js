@@ -7,6 +7,7 @@ class UI {
 
         this.stickyMenu();
         this.renderCardsMenu();
+        this.renderCardtoScreen('commercial');
     }
 
     stickyMenu() {
@@ -14,7 +15,7 @@ class UI {
 
             const homeDiv = document.querySelector('.home');
             const homeDivClinetHeight = homeDiv.clientHeight;
-        
+
             let offsetY = null;
             window.addEventListener('scroll', () => {
                 offsetY = window.pageYOffset;
@@ -26,10 +27,10 @@ class UI {
                     navigation.style.position = 'inherit';
                 }
             });
-        
-        
+
+
         }
-       
+
         document.addEventListener('DOMContentLoaded', scrollEvents);
     }
 
@@ -42,16 +43,18 @@ class UI {
         const projMenuSection = document.querySelector('.projects-menu');
         this.menu = document.createElement('ul');
         const menuItems = ['commercial', 'fun'];
-        for(let menuItem of menuItems){
+        for (let menuItem of menuItems) {
             console.log(menuItem);
             this.li = document.createElement('li');
+            this.li.className = 'project_menu';
             this.li.textContent = menuItem;
 
             this.menu.appendChild(this.li);
 
             this.li.addEventListener('click', e => {
+                const projectContainer = document.querySelector('.projects-container');
+                projectContainer.innerHTML = '';
                 let clikedLi = e.target.textContent;
-                console.log(clikedLi);
                 this.renderCardtoScreen(clikedLi);
             })
         }
@@ -60,20 +63,15 @@ class UI {
     }
 
     renderCardtoScreen(type) {
+        console.log(type);
         const cardsParent = document.querySelector('.projects-container');
-        cardsParent.innerHTML = '';
         for (let card of cardsData) {
-            if(card.category === type){
+            if (card.category === type) {
                 let cardComp = null;
                 cardComp = new Card(card.id, card.name, card.img, card.git);
                 cardComp.mount(cardsParent);
             }
         }
-    }
-
-    update() {
-        
-        
     }
 
 }
