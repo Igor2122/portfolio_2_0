@@ -44,7 +44,6 @@ class UI {
         this.menu = document.createElement('ul');
         const menuItems = ['commercial', 'fun'];
         for (let menuItem of menuItems) {
-            console.log(menuItem);
             this.li = document.createElement('li');
             this.li.className = 'project_menu';
             this.li.textContent = menuItem;

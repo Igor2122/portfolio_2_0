@@ -13,6 +13,8 @@
 
         li {
             list-style: none;
+            cursor: pointer;
+            text-transform: uppercase;
         }
     }
 
@@ -28,7 +30,6 @@
     justify-content: center;
 
     .projects-container {
-        // margin-top: 12em;
         height: 60%;
         width: 90%;
         display: flex;
