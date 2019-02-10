@@ -3,6 +3,10 @@ const card = new Card();
 class UI {
     constructor(card) {
         this.card = card;
+
+
+        this.stickyMenu();
+        this.renderCardsMenu();
     }
 
     stickyMenu() {
@@ -44,6 +48,11 @@ class UI {
             this.li.textContent = menuItem;
 
             this.menu.appendChild(this.li);
+
+            this.li.addEventListener('click', e => {
+                let clikedLi = e.target.textContent;
+                console.log(clikedLi);
+            })
         }
 
         projMenuSection.appendChild(this.menu);
@@ -52,17 +61,20 @@ class UI {
     renderCardtoScreen() {
         const cardsParent = document.querySelector('.projects-container');
         for (let card of cardsData) {
-            if(card.category === 'fun'){
-                let cardComp = new Card(card.id, card.name, card.img, card.git);
+            if(card.category === 'commercial'){
+                let cardComp = null;
+                if(cardComp){
+                    cardsParent.removeChild(cardComp);
+                }
+                cardComp = new Card(card.id, card.name, card.img, card.git);
                 cardComp.mount(cardsParent);
             }
         }
     }
 
     update() {
-        this.stickyMenu();
         this.renderCardtoScreen();
-        this.renderCardsMenu();
+        
     }
 
 }
