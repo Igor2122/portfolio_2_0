@@ -1,3 +1,3 @@
-// const ui = new UI();
+const ui = new UI();
 
 

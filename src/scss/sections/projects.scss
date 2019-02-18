@@ -4,7 +4,6 @@
     position: relative;
     background: #272F44;
     background-image: $background-pattern;
-    height: 100vh;
 
     .projects-menu>ul {
         @include vertical-Align;
@@ -37,7 +36,6 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: 150px; // temporary
 
         .project-card {
             position: relative;

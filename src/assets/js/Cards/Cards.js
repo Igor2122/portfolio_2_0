@@ -10,17 +10,28 @@ class Card {
     // <div class="project-card"></div>
     render(data) {
         this.element = document.createElement('div');
-        this.element.setAttribute('data-tilt', ''); // ask how to make blank attribute
+        // this.element.setAttribute('data-tilt', ''); // ask how to make blank attribute
         this.element.className = 'project-card';
-        this.element.style.background = 'pink';
-        this.element.setAttribute('style', `background: center/cover no-repeat url(${this.img}) ;`)
+        // this.element.style.background = 'pink';
+        // this.element.setAttribute('style', `background: center/cover no-repeat url(${this.img}) ;`)
         this.element.innerHTML = `
-        <a class="github" href="${this.git}" target="_blank"> <i class="fab fa-github fa-md-2x"></i></a>
-        <div class="project-div">
-          <h3>
-            <a href="http://www.chefmarwanslim.com/" target="_blank">${this.name}</a>
-          </h3>
-        </div>
+        <img src="./img/project/${this.img}" alt="besspoke" srcset="">
+          <div class="project-info">
+            <h4>${this.name} <span></span></h4>
+            <hr>
+            <p>This was One of my first Projects</p>
+            <div class="social-media">
+              <div class="github">
+                <a href="https://github.com/Igor2122" target="_blank"> <i class="fab fa-github fa-md-2x"></i></a>
+              </div>
+              <div class="instagram">
+                <a href=""><i class="fab fa-instagram fa-md-2x"></i></a> 
+              </div>
+            </div>
+          </div>
+          <div class="short-description">
+              <h4>Portfolio Project</h4>
+          </div>
         `;
         
         this.element.addEventListener("mousemove", (e) => {

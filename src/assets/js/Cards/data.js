@@ -2,13 +2,13 @@ const cardsData = [{
         'id': 1,
         'category': 'commercial',
         'name': 'Marwan Slim',
-        'img': '../../img/project/marwan-page.png',
+        'img': '../../img/project/chef_marwan.png',
         'git': 'https://github.com/Igor2122/marwan-3-0',
     },
     {
         'id': 2,
         'category': 'commercial',
-        'name': 'Bespoke Professionals',
+        'name': 'Besspoke',
         'img': '../../img/project/besspoke.png',
         'git': null,
     },
@@ -16,7 +16,7 @@ const cardsData = [{
         'id': 3,
         'category': 'commercial',
         'name': 'IFI Foods',
-        'img': '../../img/project/ifi-fool-page.png',
+        'img': '../../img/project/ifi_foods.png',
         'git': null,
     }, 
     {
@@ -49,6 +49,13 @@ const cardsData = [{
     },
     {
         'id': 8,
+        'category': 'fun',
+        'name': 'ChatBot App',
+        'img': '../../img/project/besspoke-reponsive.png',
+        'git': null,
+    },
+    {
+        'id': 9,
         'category': 'fun',
         'name': 'ChatBot App',
         'img': '../../img/project/besspoke-reponsive.png',
