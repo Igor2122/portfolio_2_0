@@ -35,10 +35,6 @@ class UI {
     }
 
 
-    // <ul>
-    //     <li>Commercial</li>
-    //     <li>Fun</li>
-    //   </ul>
     renderCardsMenu() {
         const projMenuSection = document.querySelector('.projects-menu');
         this.menu = document.createElement('ul');

@@ -1,3 +1,3 @@
-const ui = new UI();
-// ui.renderCardtoScreen('commercial');
+// const ui = new UI();
+
 
