@@ -49,12 +49,61 @@
             transform-style: preserve-3d;
             cursor: pointer;
             background: #fff;
+            @include mobile {
+                background: top/cover url('../../img/project/besspoke.png');
+                &::after{
+                    content: '';
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(39,47,68,.8);
+                    position: absolute;
+                    z-index: 0;
+                }
+            }
+
+            .project-info {
+                width: 40%;
+                position: absolute;
+                top: 30%;
+                right: 5%;
+                text-align: center;
+                z-index: 1;
+                color: #fff;
+
+                @include mobile {
+                    top: 20%;
+                }
+
+                h4,p{
+                    color: black;
+                    @include mobile {
+                        color: #fff;
+                    }
+                }
+                p {
+                    font-size: .5em;
+                }
+
+                .social-media {
+                    color: black;
+                    width: 50%;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include mobile {
+                        color: #fff;
+                    }
+                }
+            }
 
             img {
                 position: absolute;
                 z-index: 1;
                 height: 100%;
-                // width: 60%;
+                @include mobile{
+                    display: none;
+                }
             }
 
             .prj-img {
@@ -74,21 +123,13 @@
                 position: absolute;
                 bottom: 0;
                 background-color: #14152E;
-                @include vertical-Align;
-
+                
                 h4 {
                     margin-left: 50%;
                 }
+        
             }
-
-            .github {
-                position: absolute;
-                z-index: 5;
-                color: #fff;
-                top: 50%;
-                right: 50%;
-            }
-
+                
             &:hover .project-div {
                 bottom: 30%;
             }
