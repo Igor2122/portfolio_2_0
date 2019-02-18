@@ -15,7 +15,6 @@ class Card {
         this.element.style.background = 'pink';
         this.element.setAttribute('style', `background: center/cover no-repeat url(${this.img}) ;`)
         this.element.innerHTML = `
-        
         <a class="github" href="${this.git}" target="_blank"> <i class="fab fa-github fa-md-2x"></i></a>
         <div class="project-div">
           <h3>

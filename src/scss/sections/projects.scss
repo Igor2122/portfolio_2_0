@@ -46,31 +46,35 @@
             height: 15em;
             position: relative;
             overflow: hidden;
-            transform-style: preserve-3d;
-            cursor: pointer;
             background: #fff;
+            @include mobile {
+                margin-top: 3em;
+            }
+
             @include mobile {
                 background: top/cover url('../../img/project/besspoke.png');
                 &::after{
                     content: '';
                     height: 100%;
                     width: 100%;
-                    background: rgba(39,47,68,.8);
+                    background: rgba(39,47,68,.6);
                     position: absolute;
                     z-index: 0;
                 }
             }
 
             .project-info {
-                width: 40%;
                 position: absolute;
+                width: 40%;
                 top: 30%;
                 right: 5%;
                 text-align: center;
                 z-index: 1;
                 color: #fff;
-
+                
+                
                 @include mobile {
+                    right: 30%;
                     top: 20%;
                 }
 
@@ -92,7 +96,10 @@
                     justify-content: space-between;
 
                     @include mobile {
-                        color: #fff;
+                        
+                        i {
+                            color: #fff;
+                        }
                     }
                 }
             }
