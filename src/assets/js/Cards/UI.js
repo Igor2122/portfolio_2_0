@@ -63,7 +63,7 @@ class UI {
         for (let card of cardsData) {
             if (card.category === type) {
                 let cardComp = null;
-                cardComp = new Card(card.id, card.name, card.img, card.git);
+                cardComp = new Card(card.id, card.name, card.descrp, card.img, card.git, card.webLink);
                 cardComp.mount(cardsParent);
             }
         }

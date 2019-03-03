@@ -1,9 +1,11 @@
 class Card {
-    constructor(id, name, img, git) {
+    constructor(id, name, descrp, img, git, webLink) {
         this.id = id;
         this.name = name;
+        this.descrp = descrp;
         this.img = img;
-        this.git = git
+        this.git = git;
+        this.webLink = webLink;
     }
 
 
@@ -19,13 +21,13 @@ class Card {
           <div class="project-info">
             <h4>${this.name} <span></span></h4>
             <hr>
-            <p>This was One of my first Projects</p>
+            <p>${this.descrp}</p>
             <div class="social-media">
               <div class="github">
-                <a href="https://github.com/Igor2122" target="_blank"> <i class="fab fa-github fa-md-2x"></i></a>
+                <a href="${this.git}" target="_blank"> <i class="fab fa-github fa-md-2x"></i></a>
               </div>
               <div class="instagram">
-                <a href=""><i class="fab fa-instagram fa-md-2x"></i></a> 
+                <a href="${this.webLink}" target="_blank"><i class="fas fa-globe fa-md-2x"></i></a> 
               </div>
             </div>
           </div>
