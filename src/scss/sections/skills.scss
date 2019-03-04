@@ -1,8 +1,13 @@
 @import "../base/base";
 
 .skills-layout {
+    padding-top: 8em;
     background: no-repeat url('../../img/dude-no-background.png');
     background-position: left 10% bottom 5%;
+
+    @include mobile {
+        background: url('');
+    }
 }
 
 
@@ -23,7 +28,7 @@
     }
 
     @include mobile {
-        background: $mian-color;
+        background: $main-color;
         background-image: $background-pattern;
     }
 
@@ -105,6 +110,10 @@
         width: 50%;
         margin: auto;
         padding: 2em 0;
+
+        @include mobile {
+            width: 70%;
+        }
     }
 
     .social-media {

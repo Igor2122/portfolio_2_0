@@ -2,11 +2,10 @@
 
 .about {
     height: 100vh;
-    background: $mian-color;
+    background: $main-color;
     background-image: $background-pattern;
     color: #fff;
     position: relative;
-
 
     .section-name-div {
 
@@ -25,6 +24,9 @@
         width: 70%;
         margin: auto;
         @include vertical-Align;
+        @include mobile {
+            width: 90%;
+        }
 
 
         @include mobile {
@@ -50,9 +52,14 @@
         .img-div,
         .about-text-div {
             height: 100%;
+            & > div {
+
+                width: 100%;
+            }
 
             .about-img {
-                max-width: 72%;
+                width: 72%;
+                margin: 20% auto 0;
                 opacity: .9;
             }
         }
@@ -71,8 +78,7 @@
             padding: 1em;
 
             h2 {
-                // color: $highlight;
-                font-family: $mian-color;
+                font-family: $main-color;
                 font-size: 2.5em;
             }
 
