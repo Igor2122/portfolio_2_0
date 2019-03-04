@@ -58,7 +58,7 @@ class UI {
     }
 
     renderCardtoScreen(type) {
-        console.log(type);
+        // console.log(type);
         const cardsParent = document.querySelector('.projects-container');
         for (let card of cardsData) {
             if (card.category === type) {
