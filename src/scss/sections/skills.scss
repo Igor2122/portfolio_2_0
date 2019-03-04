@@ -41,157 +41,75 @@
         bottom: -10%;
         height: 100%;
     }
+}
 
-    .skills-layout {
+.skills-layout {
+
+    display: flex;
+    height: 100%;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+
+    .skills-left {
+        width: 60%;
         display: flex;
         height: 100%;
 
         @include mobile {
-            flex-direction: column;
+            width: 100%;
         }
 
-        .skills-left {
-            width: 60%;
-            height: 100%;
+        .skills_logos {
+            width: 90%;
+            align-self: flex-end;
+            margin-bottom: 3em;
             display: flex;
-            align-items: flex-end;
+            flex-wrap: wrap;
             justify-content: space-around;
 
             @include mobile {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .skills--boxes {
-                position: relative;
-                width: 30%;
-                height: 30%;
-                background: $mian-color;
-                margin-bottom: 2em;
-                border-radius: .5em;
-                z-index: 99;
-
-                .content {
-                    position: relative;
-                    z-index: 50;
-                }
-
-                .overlay {
-                    @include overlay;
-                    border-radius: .5em;
-                }
-
-                @include mobile {
-                    width: 100%;
-                    margin-top: 15%;
-                }
-
-                .learn-more {
-                    @include buttons;
-                    width: 9em;
-                    padding: 0;
-                    margin-top: 1em;
-                }
-
-                .skill-one {
-                    top: 0;
-                    left: 0;
-                }
-
-                .skill-two {
-                    bottom: 0;
-                    left: 0;
-                }
-
-                .skill-three {
-                    top: 0;
-                    right: 0;
-                }
-
-                .skill-four {
-                    bottom: 0;
-                    right: 0;
-                }
-
-
-                &:hover {
-                    animation: wiggle .3s;
-                    animation-delay: .1s;
-                    transform: scale(1.05);
-                    transition: all .3s ease-in;
-                    cursor: pointer;
-
-                    .skill-one {
-                        transform: scale(1.1) rotate(-5deg) translate(-2.5em, -.1em);
-                        transition: all .3s .3s ease-in;
-                    }
-
-                    .skill-two {
-                        transform: scale(1.1) rotate(-10deg) translate(-2.5em, -.5em);
-                        transition: all .3s .45s ease-in;
-                    }
-
-                    .skill-three {
-                        transition: all .3s .4s ease-in;
-                        transform: scale(1.1) rotate(5deg) translate(2.5em, -.5em);
-                    }
-
-                    .skill-four {
-                        transform: scale(1.1) rotate(10deg) translate(2.5em, -.1em);
-                        transition: all .3s .32s ease-in;
-                    }
-                }
-
-                &:nth-child(1) {
-                    // position: relative;
-                    top: -5em;
-                }
-
-                h2 {
-                    padding-top: 2em;
-                }
-
-                .tech-logos {
-                    width: 20%;
-                    position: absolute;
-                    z-index: -99;
-                }
-
-
-            }
-
-
-            @include mobile {
+                margin-top: 10%;
                 width: 100%;
+                margin: 10% auto;
             }
         }
 
-        .skills-right {
-            width: 40%;
-            height: 100%;
-            @include vertical-Align;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            text-align: center;
-
-            @include mobile {
-                order: -1;
-                width: 100%;
-            }
-
-            p {
-                width: 50%;
-                margin: auto;
-                padding: 2em 0;
-            }
-
-            .social-media {
-                @include social-media-div;
-                margin: auto;
-            }
-
-        }
     }
+
+
+}
+
+.skills-img {
+    height: 3em;
+}
+
+
+.skills-right {
+    width: 40%;
+    height: 100%;
+    @include vertical-Align;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    @include mobile {
+        order: -1;
+        width: 100%;
+    }
+
+    p {
+        width: 50%;
+        margin: auto;
+        padding: 2em 0;
+    }
+
+    .social-media {
+        @include social-media-div;
+        margin: auto;
+    }
+
 }
