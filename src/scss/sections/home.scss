@@ -32,6 +32,7 @@
         background: rgba(20, 21, 46, 0.92);
         z-index: 0;
         transform: skewY(-132deg);
+
         @include mobile {
             transform: skewY(0);
             height: 100%;
@@ -52,13 +53,13 @@
         color: #eee;
         align-self: center;
         margin-left: 2em;
-        
+
         @include mobile {
             margin-top: 6em;
         }
-        
+
         @include lgDesctop {
-            margin-top: 9em;
+            margin-top: 22em;
         }
 
         h1 {
